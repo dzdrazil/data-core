@@ -1,0 +1,25 @@
+{
+  "name": "data-core",
+  "private": true,
+  "version": "0.0.1",
+  "author": "https://github.com/dzdrazil/data-core",
+  "homepage": "https://github.com/dzdrazil/data-core",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dzdrazil/data-core"
+  },
+  "scripts": {
+    "build": "gulp build --type cjs",
+    "test": "node test.js",
+    "dist": "gulp build --type cjs --minify && gulp build --type amd --minify && gulp build --minify"
+  },
+  "issues": "https://github.com/dzdrazil/data-core/issues",
+  "devDependencies": {
+    "gulp": "~3.8.6",
+    "yargs": "~1.2.6",
+    "gulp-concat": "~2.3.3",
+    "gulp-if": "~1.2.2",
+    "gulp-uglify": "~0.3.1",
+    "gulp-replace": "~0.4.0"
+  }
+}
