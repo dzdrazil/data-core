@@ -27,7 +27,7 @@
     "boss": false,
     "debug": false,
     "eqnull": true,
-    "esnext": false,
+    "esnext": true,
     "moz": false,
     "evil": false,
     "expr": false,
@@ -62,11 +62,5 @@
     "nomen": false,
     "onevar": false,
     "passfail": false,
-    "white": false,
-    "globals": {
-        "requirejs": true,
-        "require": true,
-        "define": true,
-        "DocumentTouch": true
-    }
+    "white": false
 }
