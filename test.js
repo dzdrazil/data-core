@@ -1,5 +1,10 @@
 var assert = require('assert');
-var Core = require('./dist/data-core');
+
+require('babel/register')({
+    stage: 0
+});
+
+var Core = require('./src/data-core');
 
 function TestModel(data) {
     Core.BaseModel.call(this, data);
@@ -63,6 +68,7 @@ t = new TestCollection([
     },
 ]);
 
+
 assert.equal(t.length, 3, 'Collection length is properly set');
 
 // copy
@@ -109,7 +115,7 @@ assert.equal(temp.length, 0, 'empty removes all models');
 
 // each
 var ids = [];
-t.each(function(m) {
+t.forEach(function(m) {
     ids.push(m.id);
 });
 assert.equal(ids.length, 4, 'each iterates over every model');

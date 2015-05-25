@@ -5,7 +5,7 @@ import BaseModel from './BaseModel';
 export default class BaseCollection {
     _models = [];
 
-    _modelConstructor = BaseModel;
+    modelConstructor = BaseModel;
 
     constructor(data) {
         if (data) {
@@ -27,7 +27,6 @@ export default class BaseCollection {
 
     add(data) {
         let model;
-
         if (data instanceof this.modelConstructor) {
             model = data;
         } else {
